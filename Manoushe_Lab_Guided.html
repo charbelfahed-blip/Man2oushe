@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#172b25"><meta name="description" content="Interactive Lebanese man'oushe recipe: adjust number and size, scale ingredients, plan overnight fermentation, and bake with the Ooni Karu 2 Pro."><title>Man’oushe Lab • Overnight Edition</title>
+<style>
+:root{--bg:#10251f;--panel:#1b342b;--panel2:#244036;--line:#39564a;--white:#f8f4e9;--muted:#b8c5b6;--amber:#ffc875;--mint:#bddbc0;--brown:#bc8050;--ink:#26352c;--shadow:0 18px 55px #00160e50}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at top left,#37523e 0,transparent 430px),var(--bg);font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--white)}button,input,select{font:inherit}button{cursor:pointer}button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--amber);outline-offset:3px}.wrap{max-width:1140px;margin:auto;padding:21px 19px 100px}.top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:22px}.logo{font-size:13px;font-weight:800;letter-spacing:.14em;color:var(--mint);text-transform:uppercase}.pill{display:inline-flex;align-items:center;gap:6px;border:1px solid #60826a;border-radius:50px;padding:5px 10px;font-size:11px;font-weight:750;letter-spacing:.04em;color:var(--mint);background:#162f25}.btn{border:1px solid var(--line);border-radius:11px;padding:10px 15px;background:var(--panel2);color:var(--white);font-weight:750}.btn:hover{filter:brightness(1.15)}.btn.primary{background:var(--amber);border-color:var(--amber);color:#332716}.btn.outline{background:transparent}.btn:disabled{opacity:.5;cursor:default}.hero{display:grid;grid-template-columns:minmax(0,1.13fr) minmax(270px,.87fr);position:relative;background:linear-gradient(120deg,#273d30,#1a3429 65%,#4a4730);border:1px solid #557256;border-radius:26px;overflow:hidden;box-shadow:var(--shadow)}.hero-text{padding:40px 36px 43px}.kicker{text-transform:uppercase;letter-spacing:.18em;color:var(--mint);font-size:11px;font-weight:850}.hero h1{font-size:clamp(39px,5.7vw,64px);letter-spacing:-.062em;line-height:1.02;margin:14px 0 15px}.hero h1 em{color:var(--amber);font-style:normal}.hero p{color:#d3dfd0;font-size:16px;max-width:470px;margin:0 0 20px}.chips{display:flex;flex-wrap:wrap;gap:8px}.hero-art{min-height:320px;display:grid;place-items:center;overflow:hidden;position:relative;background:radial-gradient(circle at 50% 45%,#6a5635 0,#2f3a2a 43%,transparent 70%)}.hero-art svg{max-width:440px;width:110%;filter:drop-shadow(0 16px 12px #07150f80)}.art-label{position:absolute;bottom:18px;right:22px;color:#e9cda5;font-size:12px;font-weight:700;letter-spacing:.08em}.sections{display:grid;gap:23px;margin-top:26px}.panel{background:var(--panel);border:1px solid var(--line);border-radius:21px;padding:25px;box-shadow:0 12px 28px #06150f17}.panel h2{font-size:25px;letter-spacing:-.036em;line-height:1.15;margin:5px 0 9px}.sub{color:var(--muted);margin:0 0 18px;font-size:14px}.eyebrow{color:var(--mint);font-size:11px;text-transform:uppercase;letter-spacing:.15em;font-weight:850}.settings{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.control{background:#213a30;border:1px solid var(--line);border-radius:16px;padding:17px}.control label,.control .lab{color:var(--muted);font-size:12px;font-weight:750;display:block;margin-bottom:9px}.biginput{width:100%;min-height:45px;background:#142d24;border:1px solid #587063;border-radius:10px;color:var(--white);padding:9px 12px;font-size:19px;font-weight:780}.helper{font-size:11px;color:#aebdae;margin-top:9px}.stepper{display:flex;align-items:center;gap:10px}.stepper button{width:45px;height:45px;flex:none;border:1px solid var(--line);border-radius:11px;background:#365146;color:var(--white);font-size:22px}.stepper input{min-width:0;text-align:center}.presets{display:flex;gap:5px;flex-wrap:wrap;margin-top:10px}.chipbutton{font-size:12px;border:1px solid #4d6a5b;border-radius:9px;background:#29473b;color:#e5ebdc;padding:6px 8px}.chipbutton.active{background:var(--amber);color:#3e2e16;border-color:var(--amber);font-weight:800}.switchline{display:flex;gap:10px;align-items:center;margin:12px 0;color:var(--white);font-size:13px}.switchline input{accent-color:#dbac65;width:18px;height:18px}.statgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:19px 0 0}.stat{background:#243f33;border:1px solid #3c5c49;border-radius:12px;padding:13px 11px}.stat strong{display:block;font-size:21px;line-height:1.3;letter-spacing:-.025em;font-variant-numeric:tabular-nums}.stat small{display:block;font-size:11px;color:var(--muted);margin-top:4px}.stat strong.gold{color:var(--amber)}.two{display:grid;grid-template-columns:minmax(0,1.06fr) minmax(0,.94fr);gap:24px}.ingredients{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}.ingredients th{text-align:left;color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.1em;padding:0 0 10px;border-bottom:1px solid var(--line)}.ingredients td{padding:10px 1px;border-bottom:1px solid #355244}.ingredients td:last-child{text-align:right;font-weight:800}.ingredients tr:last-child td{border:0}.note{background:#2e4635;border-left:3px solid var(--amber);border-radius:0 11px 11px 0;padding:13px 15px;font-size:12px;color:#e2ead6;margin-top:16px}.method-row{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 18px}.method-row button{flex:1}.method-row button.selected{background:var(--amber);border-color:var(--amber);color:#382815}.fieldgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.fieldgrid label{display:block;font-size:12px;font-weight:750;color:var(--muted);margin-bottom:6px}.fieldgrid input{width:100%;background:#112d23;border:1px solid #526b5c;border-radius:9px;color:var(--white);padding:11px 8px;font-size:14px;min-height:45px}.timeline{display:grid;gap:0;margin-top:14px}.event{display:grid;grid-template-columns:84px 14px 1fr;gap:12px;align-items:start;min-height:67px}.stamp{color:var(--amber);font-weight:800;font-size:13px;font-variant-numeric:tabular-nums;line-height:1.27;padding-top:1px}.stamp small{display:block;color:var(--muted);font-size:11px;font-weight:600}.axis{display:flex;flex-direction:column;align-items:center;align-self:stretch}.dot{width:11px;height:11px;background:var(--amber);border:2px solid #724d2c;border-radius:50%;flex:none;margin:2px}.track{height:100%;width:2px;background:#607363}.event:last-child .track{opacity:0}.event h4{font-size:14px;line-height:1.25;margin:0 0 5px}.event p{font-size:12px;color:var(--muted);margin:0 0 16px}.warning{padding:10px 13px;border-radius:10px;background:#584428;border:1px solid #8f683b;font-size:12px;margin:10px 0;color:#ffe8bf}.steps{display:grid;gap:9px}.step{display:grid;grid-template-columns:26px minmax(0,1fr);gap:13px;align-items:start;padding:16px;border:1px solid #435d4e;background:#223b31;border-radius:14px}.step input{height:21px;width:21px;accent-color:#e9bd77;margin:3px 0}.step h3{font-size:15px;margin:0 0 7px}.step p{margin:0;color:#ccd8c8;font-size:13px}.step.done{opacity:.62}.step.done h3{text-decoration:line-through}.progress{display:flex;align-items:center;gap:15px;margin:0 0 16px}.bar{height:9px;background:#3f5649;border-radius:20px;overflow:hidden;flex:1}.bar div{height:100%;width:0;background:var(--amber);border-radius:20px;transition:width .2s}.foot{color:#a5b7a5;font-size:12px;margin:25px 2px 4px;text-align:center}.print-note{display:none}@media(max-width:800px){.hero{grid-template-columns:1fr}.hero-art{min-height:240px}.hero-art svg{max-width:320px;width:94%}.settings{grid-template-columns:1fr 1fr}.two{grid-template-columns:1fr}.statgrid{grid-template-columns:repeat(2,1fr)}}@media(max-width:560px){.wrap{padding:14px 12px 80px}.top{margin-bottom:14px}.logo{font-size:11px}.top .btn{padding:8px 10px;font-size:12px}.hero{border-radius:20px}.hero-text{padding:31px 23px 28px}.hero h1{font-size:46px}.hero p{font-size:14px}.hero-art{min-height:207px}.hero-art svg{max-width:270px}.panel{padding:19px 16px;border-radius:17px}.panel h2{font-size:23px}.settings{grid-template-columns:1fr}.statgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.fieldgrid{grid-template-columns:1fr}.event{grid-template-columns:74px 12px 1fr;gap:9px}.stamp{font-size:12px}}@media print{body{background:white;color:#111}.wrap{max-width:100%;padding:0}.hero-art,.top,.method-row,.control,.btn,.foot,.step input{display:none!important}.hero,.panel{box-shadow:none;background:white;color:#111;border:1px solid #bbb}.hero-text{padding:14px}.hero h1{color:#111}.hero h1 em{color:#111}.hero p,.sub,.helper,.step p,.event p,.stamp,.stamp small{color:#333}.sections{display:block}.panel{break-inside:avoid;margin:10px 0}.two{grid-template-columns:1fr 1fr}.settings{display:none}.statgrid{display:grid}.stat{background:white;color:#111;border:1px solid #aaa}.stat small{color:#555}.step{background:white;border:1px solid #ddd;grid-template-columns:1fr}.step h3{color:#111}.print-note{display:block}}
+
+/* Guided Baking Studio — shared across both recipe labs */
+[hidden]{display:none!important}
+.guided-launch{margin:23px 0 2px;border:1px solid #dca966;background:linear-gradient(118deg,#fff0cf15,#ffd08e20);border-radius:21px;padding:22px;display:flex;align-items:center;justify-content:space-between;gap:20px;box-shadow:0 12px 35px #090f1018;color:inherit}
+.guided-launch h2{font-size:clamp(21px,3vw,28px);letter-spacing:-.04em;margin:5px 0 7px}
+.guided-launch p{font-size:14px;opacity:.85;margin:0;max-width:580px}
+.guided-launch small{display:block;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:#ffce84}
+.guided-launch button{cursor:pointer;min-width:195px;border:0;border-radius:13px;background:#f7be70;color:#273020;font-size:16px;font-weight:800;font-family:inherit;padding:17px 22px;box-shadow:0 10px 26px #0002}
+.guided-launch button:focus-visible,.cook-shell button:focus-visible,.cook-shell textarea:focus-visible,.cook-shell input:focus-visible{outline:3px solid #ffbc68;outline-offset:3px}
+body.guided-open{overflow:hidden}
+.cook-shell{position:fixed;inset:0;z-index:9999;background:#10261e;color:#f6f5e9;overflow:auto;overscroll-behavior:contain;font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.cook-shell *{box-sizing:border-box}
+.cook-shell button{font:inherit;cursor:pointer;color:inherit}
+.cook-shell .cook-header{position:sticky;top:0;z-index:10;background:#142c24f5;border-bottom:1px solid #42604d;padding:12px max(16px,env(safe-area-inset-left));backdrop-filter:blur(20px)}
+.cook-shell .cook-header-inner{display:flex;align-items:center;gap:12px;justify-content:space-between;max-width:1020px;margin:0 auto}
+.cook-shell .cook-brand{font-size:12px;letter-spacing:.13em;font-weight:850;text-transform:uppercase;color:#f6c987}
+.cook-shell .cook-batch{font-size:12px;color:#bdd0ba;line-height:1.4}
+.cook-shell .cook-close{white-space:nowrap;padding:10px 12px;border-radius:10px;background:#254235;border:1px solid #587263;font-weight:700;font-size:13px}
+.cook-shell .cook-wrap{max-width:1020px;margin:0 auto;padding:24px 18px 130px}
+.cook-shell .cook-overline{font-size:12px;color:#f9c888;letter-spacing:.12em;font-weight:800;text-transform:uppercase;margin:0 0 7px}
+.cook-shell .cook-h1{font-size:clamp(29px,4vw,43px);line-height:1.12;letter-spacing:-.045em;margin:0 0 13px;font-weight:850}
+.cook-shell .cook-intro{color:#c9d7c7;margin:0 0 18px;max-width:690px;font-size:14px}
+.cook-shell .cook-progress-line{height:8px;overflow:hidden;border-radius:12px;background:#3a5342;margin-bottom:11px}
+.cook-shell .cook-progress-fill{height:100%;background:#ffc875;transition:width .2s}
+.cook-shell .cook-progress-label{display:flex;justify-content:space-between;font-size:12px;color:#c6d1c4;gap:14px;margin-bottom:18px}
+.cook-shell .cook-jumps{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 22px}
+.cook-shell .cook-jumps button{width:35px;height:35px;border-radius:10px;border:1px solid #627868;background:#294537;color:#f2f1e7;font-size:13px;font-weight:800}
+.cook-shell .cook-jumps button.active{background:#ffc875;color:#2a261d;border-color:#ffc875}
+.cook-shell .cook-jumps button.complete:not(.active){border-color:#7dbb8c;color:#b9e3bd}
+.cook-shell .cook-columns{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(260px,.75fr);gap:16px;align-items:start}
+.cook-shell .cook-card{border-radius:19px;border:1px solid #456653;background:#1b382a;padding:23px;box-shadow:0 11px 32px #0002}
+.cook-shell .cook-card h2{font-size:23px;line-height:1.22;letter-spacing:-.03em;margin:0 0 14px}
+.cook-shell .cook-description p{color:#ebf0df;font-size:16px;line-height:1.75;margin:0 0 14px}
+.cook-shell .cook-description strong{color:#ffd295;font-weight:850}
+.cook-shell .cook-description .cue{background:#2c4935;border-left:3px solid #fbc77e;padding:12px 13px;margin:13px 0;border-radius:0 10px 10px 0;font-size:14px;color:#e6efdc}
+.cook-shell .cook-description h4{margin:10px 0}
+.cook-shell .cook-stepdone{display:flex;align-items:center;gap:12px;padding:14px 15px;margin-top:16px;border-radius:12px;background:#244637;border:1px solid #64866a;cursor:pointer;font-weight:800}
+.cook-shell .cook-stepdone input{width:23px;height:23px;accent-color:#ffc875;flex:none}
+.cook-shell .cook-timer{background:#203b30;border:1px solid #456452;border-radius:15px;padding:17px;margin-bottom:14px}
+.cook-shell .cook-timer-header{display:flex;gap:6px;justify-content:space-between;align-items:start;margin-bottom:10px}
+.cook-shell .cook-timer strong{font-size:13px}
+.cook-shell .cook-clock{font-size:39px;font-weight:850;letter-spacing:-.04em;font-variant-numeric:tabular-nums;line-height:1.3;color:#ffe2af}
+.cook-shell .cook-timer-controls{display:flex;flex-wrap:wrap;gap:7px;margin:10px 0 0}
+.cook-shell .cook-smallbtn{border:1px solid #648069;border-radius:9px;padding:9px 11px;background:#2b4b38;font-size:12px!important;font-weight:750!important}
+.cook-shell .cook-smallbtn.on{background:#f6c880;color:#28281e;border-color:#f6c880}
+.cook-shell .cook-timer-message{font-size:12px;color:#c3d2c3;margin:8px 0 0}
+.cook-shell .cook-side-title{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#f4c781;font-weight:850;margin:0 0 12px}
+.cook-shell .cook-ingredients{display:grid;gap:8px;font-variant-numeric:tabular-nums}
+.cook-shell .cook-ingredient{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid #3b5644;padding:3px 0 8px;font-size:13px}
+.cook-shell .cook-ingredient:last-child{border:0}
+.cook-shell .cook-ingredient span{color:#e3e9de}
+.cook-shell .cook-ingredient b{white-space:nowrap;color:#ffd59a}
+.cook-shell .cook-side-divider{height:1px;background:#42604e;margin:16px 0}
+.cook-shell .cook-note{width:100%;min-height:92px;background:#102a20;color:#fff3db;border:1px solid #597561;border-radius:11px;padding:12px;font:14px/1.4 inherit;font-family:inherit;resize:vertical}
+.cook-shell .cook-caption{font-size:11px;color:#b4c6b5;margin:8px 0 0}
+.cook-shell .cook-counter{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:15px;padding:14px;background:#2b4934;border-radius:12px}
+.cook-shell .cook-counter strong{margin-right:auto}
+.cook-shell .cook-counter button{min-width:37px;min-height:37px;border-radius:9px;border:1px solid #69866c;background:#335940;font-size:22px;line-height:1}
+.cook-shell .cook-counter span{font-size:16px;font-weight:850;font-variant-numeric:tabular-nums}
+.cook-shell .cook-finish{padding:13px;background:#2c4835;border:1px solid #709171;border-radius:11px;margin:16px 0;color:#dbe9cf}
+.cook-shell .cook-footer{position:fixed;bottom:0;left:0;right:0;padding:12px max(15px,env(safe-area-inset-left)) max(12px,env(safe-area-inset-bottom));background:#142a22f7;box-shadow:0 -8px 35px #0005;border-top:1px solid #4b6353;z-index:11;backdrop-filter:blur(18px)}
+.cook-shell .cook-footer-inner{max-width:1020px;margin:0 auto;display:grid;grid-template-columns:1fr 2fr 1fr;gap:10px}
+.cook-shell .cook-footer button{border-radius:12px;min-height:51px;padding:8px 10px;font-weight:850;border:1px solid #698471;background:#2e503b}
+.cook-shell .cook-footer button.primary{background:#ffc875;border-color:#ffc875;color:#2b291f}
+.cook-shell .cook-footer button:disabled{opacity:.4;cursor:default}
+.cook-shell .cook-toast{position:fixed;top:80px;left:50%;transform:translateX(-50%);background:#ffe4ae;color:#262a20;padding:13px 18px;border-radius:12px;font-weight:850;z-index:20;box-shadow:0 14px 30px #0006}
+@media(max-width:750px){.guided-launch{flex-direction:column;align-items:stretch;padding:19px}.guided-launch button{width:100%}.cook-shell .cook-wrap{padding:20px 13px 130px}.cook-shell .cook-columns{grid-template-columns:1fr}.cook-shell .cook-card{padding:19px 16px}.cook-shell .cook-footer-inner{grid-template-columns:1fr 1.6fr 1fr;gap:7px}.cook-shell .cook-footer button{font-size:13px;padding:8px 5px;min-height:49px}.cook-shell .cook-header-inner{gap:8px}.cook-shell .cook-brand{font-size:11px}.cook-shell .cook-batch{font-size:11px}.cook-shell .cook-jumps{gap:6px}.cook-shell .cook-jumps button{width:33px;height:33px}}
+@media print{.guided-launch,.cook-shell{display:none!important}}
+
+</style></head>
+<body data-recipe-kind="manoushe"><main class="wrap"><header class="top"><div class="logo">✦ Man’oushe Lab <span style="opacity:.58">/ Lebanese bakery</span></div><div style="display:flex;gap:7px"><button class="btn" id="copyTop">Copy</button><button class="btn" onclick="window.print()">Print</button></div></header>
+<section class="hero"><div class="hero-text"><div class="kicker">Overnight dough · Fresh morning</div><h1>Your perfect<br><em>man’oushe.</em></h1><p>Soft enough to fold, golden underneath, and fragrant with za’atar. Build any batch, then bake fresh in your Ooni Karu 2 Pro.</p><div class="chips"><span class="pill">🇱🇧 Lebanese style</span><span class="pill">❄️ Overnight cold ferment</span><span class="pill">🔥 Gas-fired Ooni</span></div><div style="margin-top:22px"><a href="#builder" class="btn primary" style="display:inline-block;text-decoration:none">Build my batch ↓</a></div></div><div class="hero-art"><svg viewBox="0 0 410 380" role="img" aria-label="Illustrated round Lebanese za'atar man'oushe"><defs><radialGradient id="bread" cx="37%" cy="30%"><stop stop-color="#ebce8d"/><stop offset=".63" stop-color="#ddb476"/><stop offset="1" stop-color="#a96d3e"/></radialGradient><pattern id="seeds" width="27" height="23" patternUnits="userSpaceOnUse"><ellipse cx="7" cy="6" rx="6" ry="3" fill="#727648" transform="rotate(35 7 6)"/><circle cx="18" cy="17" r="2.4" fill="#ddc69b"/><circle cx="26" cy="2" r="1.4" fill="#beaa7a"/></pattern></defs><ellipse cx="205" cy="324" rx="158" ry="26" fill="#0c140c" opacity=".5"/><g transform="rotate(-13 210 198)"><ellipse cx="207" cy="202" rx="155" ry="141" fill="#925c37"/><ellipse cx="205" cy="193" rx="157" ry="141" fill="url(#bread)"/><ellipse cx="205" cy="194" rx="143" ry="127" fill="#c29252"/><ellipse cx="205" cy="194" rx="138" ry="124" fill="#66623c"/><ellipse cx="205" cy="194" rx="138" ry="124" fill="url(#seeds)" opacity=".92"/><path d="M75 177c22-67 108-100 162-86" stroke="#aeb078" stroke-width="13" stroke-linecap="round" fill="none" opacity=".35"/><path d="M96 241c50 66 160 78 209 8" stroke="#323d26" stroke-width="7" stroke-linecap="round" fill="none" opacity=".35"/><circle cx="131" cy="148" r="10" fill="#bab073" opacity=".5"/><circle cx="263" cy="239" r="8" fill="#333e27" opacity=".5"/></g></svg><div class="art-label">ZA’ATAR · OLIVE OIL</div></div></section>
+<div class="sections">
+<section id="guidedLaunch" class="guided-launch" aria-label="Guided cooking">
+  <div><small>NEW · Hands-on baking mode</small><h2>Cook right from your screen</h2>
+  <p>Choose your batch in the settings below, then follow one step at a time. Quantities, checkboxes, an optional countdown timer, and your notes stay right in the app.</p></div>
+  <button type="button" id="guidedStart">▶ Start guided bake</button>
+</section>
+
+<section class="panel" id="builder"><div class="eyebrow">01 / Customize</div><h2>Build your batch</h2><p class="sub">Change how many, how wide, and how thick. The flour, water, toppings and step-by-step quantities update together.</p><div class="settings"><div class="control"><label for="count">How many manakish?</label><div class="stepper"><button id="minus" aria-label="One fewer">−</button><input id="count" class="biginput" aria-label="Manakish count" type="number" min="1" max="30" step="1" value="8"><button id="plus" aria-label="One more">+</button></div><div class="presets"><button class="chipbutton" data-count="6">6</button><button class="chipbutton active" data-count="8">8</button><button class="chipbutton" data-count="12">12</button><button class="chipbutton" data-count="16">16</button></div></div><div class="control"><label for="diameter">Diameter of each man’oushe</label><div class="stepper"><input id="diameter" class="biginput" type="number" min="18" max="30" step="1" value="24"><span style="color:var(--muted);font-weight:800">cm</span></div><div class="presets"><button class="chipbutton" data-dia="20">20 cm</button><button class="chipbutton active" data-dia="24">24 cm</button><button class="chipbutton" data-dia="26">26 cm</button><button class="chipbutton" data-dia="28">28 cm</button></div><div class="helper" id="inch">≈ 9.4 in wide</div></div><div class="control"><div class="lab">Dough weight per piece</div><label class="switchline"><input type="checkbox" id="customMode"> Set ball weight manually</label><div class="stepper"><input id="weight" class="biginput" type="number" min="70" max="350" step="1" value="149" disabled><span style="color:var(--muted);font-weight:800">g</span></div><div class="helper" id="weightHelp">Automatically scales from 149 g at 24 cm to keep the same thin, foldable thickness.</div></div></div><div class="statgrid"><div class="stat"><strong class="gold" id="sumPieces">8 pieces</strong><small>batch yield</small></div><div class="stat"><strong id="sumBall">149 g</strong><small>dough per piece</small></div><div class="stat"><strong id="sumDough">1,192 g</strong><small>total dough</small></div><div class="stat"><strong id="sumFlour">708 g</strong><small>total flour</small></div></div></section>
+<div class="two"><section class="panel" id="ingredients"><div class="eyebrow">02 / Formula</div><h2>Ingredients</h2><p class="sub">The original-style 61% hydration blend: 70% all-purpose, 25% 00, 5% whole wheat.</p><table class="ingredients"><thead><tr><th>Ingredient</th><th>For your batch</th></tr></thead><tbody id="ingredientRows"></tbody></table><div class="note" id="waterHint">💧 Water: 18–20°C (64–68°F) for KitchenAid mixing.</div><h3 style="margin:24px 0 8px;font-size:16px">Za’atar topping</h3><table class="ingredients"><tbody><tr><td>Lebanese za’atar</td><td id="toppingZ">70 g</td></tr><tr><td>Olive oil for topping</td><td id="toppingOil">90 g</td></tr></tbody></table><p class="sub" style="margin-top:13px">Stir about 10–15 minutes before baking. Spread thinly, nearly to the edge. Mix a little extra if needed.</p></section>
+<section class="panel"><div class="eyebrow">03 / Choose method</div><h2>Your workflow</h2><div class="method-row"><button id="mixerBtn" class="btn selected">🌀 KitchenAid</button><button id="handBtn" class="btn">✋ By hand</button></div><p class="sub" id="methodDesc">Dough hook, speed 1–2, with a short rest to help gluten formation.</p><div class="eyebrow">04 / Dates</div><h2 style="margin-top:9px">Plan your bake</h2><p class="sub">These times are editable for any future Friday-to-Saturday session.</p><div class="fieldgrid"><div><label for="mixTime">Start mixing</label><input id="mixTime" type="datetime-local"></div><div><label for="bakeTime">First man’oushe in oven</label><input id="bakeTime" type="datetime-local"></div></div><div class="warning" id="scheduleWarn" hidden></div><div class="timeline" id="timeline"></div><div class="note" style="margin-top:0">⏱ Dough readiness matters more than the clock. If chilled balls still spring back, keep them covered another 20–30 minutes.</div></section></div>
+<section class="panel" id="stepsSection"><div class="eyebrow">05 / Guided recipe</div><h2>Step-by-step cooking mode</h2><p class="sub">Your exact scaled quantities appear in the steps. Tick them off as you go; your progress is saved on this device.</p><div class="progress"><div class="bar"><div id="progressFill"></div></div><strong id="progressText" style="font-size:12px;white-space:nowrap">0 / 9 steps</strong><button class="btn" id="resetProgress" style="padding:7px 10px;font-size:12px">Reset</button></div><div id="steps" class="steps"></div></section>
+<section class="panel"><div class="eyebrow">06 / Karu 2 Pro</div><h2>Oven & results</h2><div class="statgrid"><div class="stat"><strong class="gold">340–360°C</strong><small>starting stone range</small></div><div class="stat"><strong>Medium-low</strong><small>gas flame while baking</small></div><div class="stat"><strong>2–3 min</strong><small>starting bake estimate</small></div><div class="stat"><strong>Foldable</strong><small>finished texture</small></div></div><div class="note">🎯 Aim for a browned but flexible underside and fragrant za’atar. Turn after the base sets; avoid an aggressive flame that burns the topping. Stone reading and bake time vary with oven recovery, topping and dough size.</div><div style="display:flex;flex-wrap:wrap;gap:9px;margin-top:20px"><button class="btn primary" id="copyBottom">Copy my recipe</button><button class="btn" onclick="window.print()">Print / Save PDF</button><button class="btn outline" id="resetSettings">Restore original defaults</button></div></section></div><footer class="foot">MAN’OUCHE LAB · saved settings & checklist in this browser · self-contained and offline-friendly<br>Recipe adapted from your soft, foldable Lebanese-style man’oushe; timing is a practical starting plan, not a guarantee of fermentation speed.</footer></main>
+<script>
+(()=>{'use strict';
+const $=id=>document.getElementById(id);const key='manoushe-lab-v1';
+const BASE={ap:490,oo:175,ww:35,water:427,salt:14,sugar:14,oil:21,yeast:2.5};const BASE_MASS=Object.values(BASE).reduce((a,b)=>a+b,0);
+const now=new Date();const dayStart=d=>new Date(d.getFullYear(),d.getMonth(),d.getDate());const defMix=dayStart(now);defMix.setHours(20,20);if(now.getHours()>22)defMix.setDate(defMix.getDate()+1);const defBake=new Date(defMix);defBake.setDate(defBake.getDate()+1);defBake.setHours(10,30);
+const localInput=d=>`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}T${String(d.getHours()).padStart(2,'0')}:${String(d.getMinutes()).padStart(2,'0')}`;
+const defaults={count:8,diameter:24,weightMode:false,weight:149,method:'mixer',mixTime:localInput(defMix),bakeTime:localInput(defBake),completed:[]};let stored={};try{stored=JSON.parse(localStorage.getItem(key)||'{}')||{}}catch(e){}let state={...defaults,...stored};if(!Array.isArray(state.completed))state.completed=[];
+const clamp=(n,low,high)=>Math.max(low,Math.min(high,Number.isFinite(n)?n:low));const clean=n=>Number(n.toFixed(n<10?2:1)).toLocaleString('en-CA',{maximumFractionDigits:n<10?2:1});const gram=n=>`${clean(n)} g`;const quantity=(n)=>Number(n.toFixed(2));const currentWeight=()=>state.weightMode?state.weight:149*Math.pow(state.diameter/24,2);const targetMass=()=>state.count*currentWeight();const amounts=()=>{let multiplier=targetMass()/BASE_MASS;return Object.fromEntries(Object.entries(BASE).map(([k,v])=>[k,v*multiplier]))};const restMinutes=(d,n)=>new Date(d.getTime()+n*60000);const fmtDate=d=>new Intl.DateTimeFormat('en-CA',{weekday:'short',month:'short',day:'numeric'}).format(d);const fmtTime=d=>new Intl.DateTimeFormat('en-CA',{hour:'numeric',minute:'2-digit'}).format(d);const timeEvent=(d,title,description)=>`<div class="event"><div class="stamp">${fmtTime(d)}<small>${fmtDate(d)}</small></div><div class="axis"><div class="dot"></div><div class="track"></div></div><div><h4>${title}</h4><p>${description}</p></div></div>`;
+function persist(){try{localStorage.setItem(key,JSON.stringify(state))}catch(e){}}
+function save(){persist();render()}
+function syncControls(){$('count').value=state.count;$('diameter').value=state.diameter;$('customMode').checked=state.weightMode;$('weight').disabled=!state.weightMode;$('weight').value=Math.round(currentWeight());$('mixTime').value=state.mixTime;$('bakeTime').value=state.bakeTime;document.querySelectorAll('[data-count]').forEach(e=>e.classList.toggle('active',Number(e.dataset.count)===state.count));document.querySelectorAll('[data-dia]').forEach(e=>e.classList.toggle('active',Number(e.dataset.dia)===state.diameter));$('mixerBtn').classList.toggle('selected',state.method==='mixer');$('handBtn').classList.toggle('selected',state.method==='hand');}
+function render(){syncControls();const a=amounts();const pct=state.diameter/24;const zArea=state.count/8*pct*pct;
+$('inch').textContent=`≈ ${(state.diameter/2.54).toFixed(1)} in wide`;$('weightHelp').textContent=state.weightMode?'Custom weight stays fixed when you change diameter.':'Auto-scales from 149 g at 24 cm to preserve the same thin, foldable thickness.';
+$('sumPieces').textContent=`${state.count} pieces`;$('sumBall').textContent=gram(currentWeight());$('sumDough').textContent=gram(targetMass());$('sumFlour').textContent=gram(a.ap+a.oo+a.ww);
+const rows=[['All-purpose flour',a.ap],['Caputo 00 flour',a.oo],['Whole-wheat flour',a.ww],['Water · 61% hydration',a.water],['Fine salt',a.salt],['Sugar',a.sugar],['Olive oil in dough',a.oil],['Instant dry yeast · overnight',a.yeast]];
+$('ingredientRows').innerHTML=rows.map(([name,grams])=>`<tr><td>${name}</td><td>${gram(grams)}</td></tr>`).join('');$('toppingZ').textContent=gram(70*zArea);$('toppingOil').textContent=gram(90*zArea);
+$('waterHint').textContent=`💧 Water: ${state.method==='mixer'?'18–20°C (64–68°F) with your KitchenAid':'20–22°C (68–72°F) when mixing by hand'}. Aim for final dough near 22–24°C.`;
+$('methodDesc').textContent=state.method==='mixer'?'Dough hook, speed 1–2, with a short rest to help gluten formation.':'Mix with a spoon and hands, then use a few rests and gentle folds instead of prolonged kneading.';
+const mix=new Date(state.mixTime),bake=new Date(state.bakeTime);const fridge=restMinutes(mix,60),out=restMinutes(bake,-150),coldH=(out-fridge)/36e5;const warn=[];
+if(!Number.isFinite(coldH)||coldH<0)warn.push('Choose a bake time after mixing; this schedule is not possible.');else if(coldH<6)warn.push(`Only ${coldH.toFixed(1)} hours of refrigeration: flavour and dough relaxation may be limited.`);else if(coldH>18)warn.push(`Approximately ${coldH.toFixed(1)} hours refrigerated: check for overproofing, especially at 4°C or warmer. A smaller yeast amount may be preferable for a longer cold ferment.`);
+$('scheduleWarn').hidden=warn.length===0;$('scheduleWarn').textContent=warn.join(' ');
+if(Number.isFinite(coldH))$('timeline').innerHTML=[timeEvent(mix,'Mix dough','Measure the scaled ingredients and combine.'),timeEvent(restMinutes(mix,20),'Knead & rest','Develop a supple, slightly tacky dough.'),timeEvent(restMinutes(mix,60),'Ball & refrigerate',`Form ${state.count} balls of about ${Math.round(currentWeight())} g; cover and chill at ~4°C.`),timeEvent(out,'Bring dough to room temperature',`Covered rest for about 2½ hours. Approximately ${Math.max(0,coldH).toFixed(1)} refrigerated hours.`),timeEvent(restMinutes(bake,-50),'Preheat Ooni','On gas; measure the centre of the stone.'),timeEvent(restMinutes(bake,-30),'Prepare toppings','Mix za’atar paste and organize your bench.'),timeEvent(bake,'Start baking','Roll, top and launch one man’oushe at a time.')].join('');
+const knead=state.method==='mixer'?`Add ${gram(a.ap)} AP flour, ${gram(a.oo)} 00 flour, ${gram(a.ww)} whole-wheat flour, ${gram(a.water)} water, ${gram(a.sugar)} sugar and ${gram(a.yeast)} instant yeast. Mix on KitchenAid speed 1 for 2 minutes, then rest 10 minutes. Add ${gram(a.salt)} salt, mix speed 2 for 3–4 minutes. Drizzle in ${gram(a.oil)} olive oil, then continue mixing 2–3 minutes until supple and slightly tacky.`:`Mix ${gram(a.ap)} AP flour, ${gram(a.oo)} 00 flour, ${gram(a.ww)} whole-wheat flour, ${gram(a.water)} water, ${gram(a.sugar)} sugar and ${gram(a.yeast)} instant yeast with a sturdy spoon or your hand. Rest 15 minutes. Incorporate ${gram(a.salt)} salt and ${gram(a.oil)} olive oil. Knead gently 3–4 minutes, rest 10 minutes, then give 2 gentle folds 10 minutes apart.`;
+const instructions=[['Prepare ingredients',`Weigh everything accurately, especially the ${gram(a.yeast)} yeast. Use cool ${state.method==='mixer'?'18–20°C':'20–22°C'} water. If your scale cannot read tenths of grams, use a micro-scale for yeast.`],['Mix & knead',knead],['Rest the dough','Cover the bowl for 25–30 minutes after mixing. One gentle fold after 15–20 minutes is optional. Avoid overworking a man’oushe dough into a chewy pizza texture.'],['Divide & refrigerate',`Divide into ${state.count} equal balls, approximately ${gram(currentWeight())} each. Lightly oil a covered tray/containers, leave space for expansion, then refrigerate promptly at approximately 4°C.`],['Warm the dough','Around 2–2½ hours before baking, remove dough balls from the fridge and keep covered at room temperature (~21°C). They should be relaxed, soft and extensible, not dramatically inflated. If they resist rolling, give them more time.'],['Make the za’atar paste',`Mix ${gram(70*zArea)} Lebanese za’atar and ${gram(90*zArea)} extra-virgin olive oil around 10–15 minutes before spreading. Aim for a spreadable paste; reserve a little extra if needed.`],['Preheat your Karu 2 Pro','Use the gas attachment. Heat the stone thoroughly; begin around 340–360°C (645–680°F) and reduce the flame to medium-low for baking. Adjust according to bottom colour and topping darkening.'],['Roll & top',`Gently roll each ${gram(currentWeight())} ball to about ${state.diameter} cm (${(state.diameter/2.54).toFixed(1)} inches), thin and even through the centre with only a tiny rim. Lightly dock the centre with a fork. Apply about ${gram(20*zArea/state.count)} za’atar paste per piece, almost to the edge.`],['Bake & enjoy','Launch onto the measured stone. Bake about 2–3 minutes as a starting point, turning frequently once the base sets. A larger or heavier piece may need longer. The base should brown while remaining foldable; the za’atar should be fragrant rather than scorched. Keep the first one as a calibration bake.']];
+$('steps').innerHTML=instructions.map(([title,body],i)=>`<label class="step ${state.completed.includes(i)?'done':''}"><input type="checkbox" data-step="${i}" ${state.completed.includes(i)?'checked':''}><div><h3>${i+1}. ${title}</h3><p>${body}</p></div></label>`).join('');$('steps').querySelectorAll('input[data-step]').forEach(el=>el.addEventListener('change',()=>{const i=Number(el.dataset.step);state.completed=el.checked?[...new Set([...state.completed,i])]:state.completed.filter(x=>x!==i);save()}));$('progressText').textContent=`${state.completed.length} / 9 steps`;$('progressFill').style.width=`${state.completed.length/9*100}%`;
+}
+function copyRecipe(){const a=amounts(),zArea=state.count/8*(state.diameter/24)**2;const text=[`MAN’OUCHE LAB — ${state.count} × ${state.diameter} cm`,`${Math.round(currentWeight())} g dough each • 61% hydration • overnight fermentation`,`Kitchen method: ${state.method}`,`Start mixing: ${state.mixTime}`,`Bake: ${state.bakeTime}`,'',...Object.entries({"AP flour":a.ap,"00 flour":a.oo,"Whole-wheat flour":a.ww,"Water":a.water,"Salt":a.salt,"Sugar":a.sugar,"Dough olive oil":a.oil,"Instant yeast":a.yeast,"Za’atar topping":70*zArea,"Topping olive oil":90*zArea}).map(([k,v])=>`${k}: ${gram(v)}`),'','Method: Mix until supple. Cover and rest 25–30 min. Divide and refrigerate overnight. Bring dough out 2–2.5 h before baking. Roll thin and dock. Spread za’atar. Bake in Ooni Karu 2 Pro, around 340–360°C stone, medium-low flame, roughly 2–3 min, turning as needed.'].join('\n');if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(()=>showCopied(),()=>fallbackCopy(text))}else fallbackCopy(text)}
+function showCopied() {const b=$('copyTop');b.textContent='Copied ✓';setTimeout(()=>b.textContent='Copy',1800)}function fallbackCopy(v){const area=document.createElement('textarea');area.value=v;document.body.append(area);area.select();try{document.execCommand('copy');showCopied()}catch(e){alert('Copy is not supported in this browser. Use Print / Save PDF instead.')}area.remove()}
+$('count').addEventListener('change',e=>{state.count=clamp(Math.round(Number(e.target.value)),1,30);save()});$('minus').addEventListener('click',()=>{state.count=clamp(state.count-1,1,30);save()});$('plus').addEventListener('click',()=>{state.count=clamp(state.count+1,1,30);save()});document.querySelectorAll('[data-count]').forEach(el=>el.addEventListener('click',()=>{state.count=Number(el.dataset.count);save()}));$('diameter').addEventListener('change',e=>{state.diameter=clamp(Number(e.target.value),18,30);save()});document.querySelectorAll('[data-dia]').forEach(el=>el.addEventListener('click',()=>{state.diameter=Number(el.dataset.dia);save()}));$('customMode').addEventListener('change',e=>{const autoWeight=Math.round(currentWeight());state.weightMode=e.target.checked;if(state.weightMode)state.weight=autoWeight;save()});$('weight').addEventListener('change',e=>{state.weight=clamp(Number(e.target.value),70,350);save()});$('mixerBtn').addEventListener('click',()=>{state.method='mixer';save()});$('handBtn').addEventListener('click',()=>{state.method='hand';save()});$('mixTime').addEventListener('change',e=>{state.mixTime=e.target.value;save()});$('bakeTime').addEventListener('change',e=>{state.bakeTime=e.target.value;save()});$('resetProgress').addEventListener('click',()=>{state.completed=[];save()});$('resetSettings').addEventListener('click',()=>{if(confirm('Restore original 8 × 24 cm batch and default schedule? Your checklist will be reset.')){state={...defaults,completed:[]};save()}});$('copyTop').addEventListener('click',copyRecipe);$('copyBottom').addEventListener('click',copyRecipe);render();
+})();
+</script><div id="cookShell" class="cook-shell" hidden role="dialog" aria-modal="true" aria-label="Guided baking session">
+  <header class="cook-header"><div class="cook-header-inner">
+    <div><div class="cook-brand" id="cookBrand">BAKING STUDIO</div><div class="cook-batch" id="cookBatch"></div></div>
+    <button type="button" class="cook-close" id="cookClose">✕ Recipe & settings</button>
+  </div></header>
+  <main class="cook-wrap">
+    <p class="cook-overline" id="cookIndex"></p><h1 class="cook-h1" id="cookTitle"></h1>
+    <p class="cook-intro">Work through the step on screen, check it off when finished, and continue. You can jump between steps at any time.</p>
+    <div class="cook-progress-line"><div class="cook-progress-fill" id="cookProgress"></div></div>
+    <div class="cook-progress-label"><span id="cookProgressText"></span><span>Auto-saved on this device</span></div>
+    <div class="cook-jumps" id="cookJumps" aria-label="Jump to a recipe step"></div>
+    <div class="cook-columns">
+      <article class="cook-card" aria-live="polite">
+        <p class="cook-overline" id="cookPhase"></p>
+        <div class="cook-description" id="cookDescription"></div>
+        <div id="cookCounter" class="cook-counter" hidden><strong>Pieces baked</strong><button type="button" id="cookMinusBake" aria-label="Decrease baked count">−</button><span id="cookBakedCount">0 / 8</span><button type="button" id="cookPlusBake" aria-label="Increase baked count">+</button></div>
+        <label class="cook-stepdone"><input type="checkbox" id="cookDone"> <span>I've completed this step</span></label>
+        <div class="cook-finish" id="cookFinish" hidden>🎉 Every step is checked off! Enjoy your bake. Your progress and notes are still saved here.</div>
+      </article>
+      <aside>
+        <div class="cook-timer"><div class="cook-timer-header"><strong>⏱ Optional step timer</strong><span class="cook-caption" id="cookTimerHint"></span></div>
+          <div class="cook-clock" id="cookClock" aria-live="off">20:00</div>
+          <div class="cook-timer-controls"><button class="cook-smallbtn on" type="button" id="cookTimerToggle">▶ Start</button><button class="cook-smallbtn" type="button" id="cookTimerAdd">+5 min</button><button class="cook-smallbtn" type="button" id="cookTimerReset">↻ Reset</button></div>
+          <p class="cook-timer-message" id="cookTimerMessage">The timer works while this page is open. Use a phone alarm for long overnight stages.</p>
+        </div>
+        <div class="cook-card"><h2 class="cook-side-title">⚖️ Your full ingredient list</h2><div id="cookIngredients" class="cook-ingredients"></div>
+          <div class="cook-side-divider"></div><label for="cookNotes" class="cook-side-title">✎ My baking notes</label><textarea class="cook-note" id="cookNotes" placeholder="e.g. Stone temperature, dough feel, bake result…"></textarea>
+          <p class="cook-caption">Notes and settings are saved locally in this browser. If you change to another browser or file address, the saved data may not carry over.</p>
+          <div class="cook-side-divider"></div><button type="button" class="cook-smallbtn" id="cookNewBatch">↻ Start a new batch (reset checklist)</button>
+        </div>
+      </aside>
+    </div>
+  </main>
+  <footer class="cook-footer"><div class="cook-footer-inner"><button type="button" id="cookBack">← Previous</button><button type="button" id="cookCompleteNext" class="primary">✓ Complete & next</button><button type="button" id="cookNext">Next →</button></div></footer>
+  <div class="cook-toast" id="cookToast" hidden role="status"></div>
+</div>
+
+
+<script>
+(() => {
+'use strict';
+const TYPE=document.body.dataset.recipeKind;
+const M=TYPE==='manoushe';
+const KEY=`guided-baking-v2-${TYPE}`;
+const $=id=>document.getElementById(id);
+const PANEL=$('cookShell');
+const MAX=M?9:8;
+const SUGGEST=M?[5,15,30,15,150,10,30,3,3]:[20,5,20,0,20,180,5,30];
+const PHASE=M?['Get ready','Knead','Rest','Chill overnight','Morning proof','Toppings','Heat your Ooni','Shape','Bake']:['Mix','Enrich','Folds','Cold fermentation','Pan & divide','Final proof','Finish','Bake'];
+const NO_TIMER=[M?3:3];
+let session={idx:0,notes:'',baked:0,timerStep:-1,timerRemaining:null,timerEnd:null};
+try{session={...session,...JSON.parse(localStorage.getItem(KEY)||'{}')}}catch(e){}
+session.idx=Math.max(0,Math.min(MAX-1,Number(session.idx)||0));
+let interval=null;
+let onceFinished=false;
+const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(session))}catch(e){}};
+const safe=(txt)=>String(txt||'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;');
+function stepElements(){return Array.from(document.querySelectorAll('#steps > .step'));}
+function sourceStep(i){const el=stepElements()[i];if(!el)return{title:`Step ${i+1}`,html:'Please return to your recipe and choose a batch.'};
+ if(M){return{title:el.querySelector('h3')?.textContent||`Step ${i+1}`,html:el.querySelector('p')?.outerHTML||''};}
+ const body=el.querySelector('.step-body')?.cloneNode(true);if(body)body.querySelectorAll('button.done-btn').forEach(b=>b.remove());return{title:el.querySelector('.step-title')?.textContent||`Step ${i+1}`,html:body?.innerHTML||''};
+}
+function checked(){return stepElements().map((el,i)=>M?!!el.querySelector('input[data-step]')?.checked:el.classList.contains('done'));}
+function toggleComplete(i,want){const el=stepElements()[i];if(!el)return;
+ const active=M?!!el.querySelector('input[data-step]')?.checked:el.classList.contains('done');if(active===want)return;
+ if(M){let inp=el.querySelector('input[data-step]');if(inp){inp.checked=want;inp.dispatchEvent(new Event('change',{bubbles:true}))}}
+ else{const b=el.querySelector('button[data-done]');if(b)b.click();}
+}
+function weightInfo(){if(M){return `${$('sumPieces')?.textContent||''} · ${$('sumBall')?.textContent||''} each · ${$('diameter')?.value||'24'} cm`};const pan=$('panNote')?.textContent||'';return `${$('panCount')?.value||'2'} pans · ${pan.replace(/^For\s*/i,'')}`;}
+function ingredientList(){let list=[];
+ if(M){list=Array.from(document.querySelectorAll('#ingredientRows tr')).map(row=>[row.cells[0]?.textContent?.trim(),row.cells[1]?.textContent?.trim()]);
+ list.push(['Za’atar topping',$('toppingZ')?.textContent||''],['Olive oil for topping',$('toppingOil')?.textContent||'']);}
+ else{list=Array.from(document.querySelectorAll('#ingredientGrid .ingredient')).map(el=>[el.querySelector('label')?.textContent?.trim(),el.querySelector('strong')?.textContent?.trim()]);list.push(['Additional olive oil',$('extraOil')?.textContent||'']);}
+ return list.filter(x=>x[0]).map(([name,num])=>`<div class="cook-ingredient"><span>${safe(name)}</span><b>${safe(num)}</b></div>`).join('');}
+function howMany(){return M?Math.max(1,Math.round(Number($('count')?.value)||8)):1;}
+function clockFmt(ms){const seconds=Math.max(0,Math.ceil(ms/1000));let h=Math.floor(seconds/3600),m=Math.floor((seconds%3600)/60),s=seconds%60;return h?`${String(h).padStart(2,'0')}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`:`${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`;}
+function defaultMs(){return SUGGEST[session.idx]*60000;}
+function remain(){return session.timerEnd?Math.max(0,session.timerEnd-Date.now()):Math.max(0,session.timerRemaining??defaultMs());}
+function updateTimer(){const ms=remain();$('cookClock').textContent=NO_TIMER.includes(session.idx)?'—':clockFmt(ms);
+ const running=Boolean(session.timerEnd);
+ $('cookTimerToggle').disabled=NO_TIMER.includes(session.idx);
+ $('cookTimerAdd').disabled=NO_TIMER.includes(session.idx);
+ $('cookTimerReset').disabled=NO_TIMER.includes(session.idx);
+ $('cookTimerToggle').textContent=running?'Ⅱ Pause':(session.timerRemaining===0?'▶ Restart':'▶ Start');
+ $('cookTimerHint').textContent=NO_TIMER.includes(session.idx)?'Use the schedule':'Suggested '+SUGGEST[session.idx]+' min';
+ if(running && ms===0){session.timerEnd=null;session.timerRemaining=0;save();showToast('⏱ Timer finished — check your dough');try{if(navigator.vibrate)navigator.vibrate([120,70,120])}catch(e){} }
+}
+function resetTimer(){session.timerStep=session.idx;session.timerEnd=null;session.timerRemaining=defaultMs();save();updateTimer();}
+function showToast(txt){const t=$('cookToast');t.textContent=txt;t.hidden=false;clearTimeout(showToast.timer);showToast.timer=setTimeout(()=>{t.hidden=true},3200)}
+function goto(i){session.idx=Math.max(0,Math.min(MAX-1,i));if(session.timerStep!==session.idx){session.timerStep=session.idx;session.timerRemaining=null;session.timerEnd=null;}save();renderCook();PANEL.scrollTo({top:0,behavior:'instant'});}
+function renderCook(){const i=session.idx;const step=sourceStep(i),flags=checked(),count=flags.filter(Boolean).length;
+ $('cookBrand').textContent=M?'🇱🇧 MAN’OUSHE LAB · COOK MODE':'✦ FOCACCIA LAB · COOK MODE';
+ $('cookBatch').textContent=weightInfo();
+ $('cookIndex').textContent=`STEP ${i+1} OF ${MAX} · ${PHASE[i]}`;
+ $('cookTitle').textContent=step.title;
+ $('cookPhase').textContent=PHASE[i];
+ $('cookDescription').innerHTML=step.html;
+ $('cookProgress').style.width=`${count/MAX*100}%`;
+ $('cookProgressText').textContent=`${count} of ${MAX} steps completed`;
+ $('cookDone').checked=flags[i];
+ $('cookJumps').innerHTML=flags.map((yes,j)=>`<button type="button" class="${j===i?'active':''} ${yes?'complete':''}" data-jump="${j}" aria-label="Go to step ${j+1}: ${safe(sourceStep(j).title)}" aria-current="${i===j?'step':'false'}">${yes?'✓':j+1}</button>`).join('');
+ $('cookIngredients').innerHTML=ingredientList();
+ $('cookBack').disabled=i===0;
+ $('cookNext').disabled=i===MAX-1;
+ $('cookCompleteNext').textContent=i===MAX-1?(flags[i]?'✓ All done':'✓ Finish baking'):(flags[i]?'Next step →':'✓ Complete & next');
+ $('cookFinish').hidden=count!==MAX;
+ $('cookCounter').hidden=!M||i!==MAX-1;
+ session.baked=Math.min(howMany(),Math.max(0,Number(session.baked)||0));
+ $('cookBakedCount').textContent=`${session.baked} / ${howMany()}`;
+ $('cookNotes').value=session.notes||'';
+ updateTimer();
+}
+function open(){PANEL.hidden=false;document.body.classList.add('guided-open');$('guidedStart').textContent='▶ Continue guided bake';renderCook();$('cookClose').focus({preventScroll:true});}
+function close(){PANEL.hidden=true;document.body.classList.remove('guided-open');$('guidedStart').focus({preventScroll:true});}
+$('guidedStart').addEventListener('click',open);
+$('cookClose').addEventListener('click',close);
+$('cookBack').addEventListener('click',()=>goto(session.idx-1));
+$('cookNext').addEventListener('click',()=>goto(session.idx+1));
+$('cookCompleteNext').addEventListener('click',()=>{toggleComplete(session.idx,true);if(session.idx<MAX-1){goto(session.idx+1)}else{renderCook();showToast('🎉 Bake complete — enjoy!')}});
+$('cookDone').addEventListener('change',(e)=>{toggleComplete(session.idx,e.target.checked);renderCook()});
+$('cookJumps').addEventListener('click',e=>{const b=e.target.closest('button[data-jump]');if(b)goto(Number(b.dataset.jump))});
+$('cookNotes').addEventListener('input',(e)=>{session.notes=e.target.value;save()});
+$('cookTimerToggle').addEventListener('click',()=>{if(NO_TIMER.includes(session.idx))return;if(session.timerEnd){session.timerRemaining=remain();session.timerEnd=null;}
+ else{const ms=remain()||defaultMs();session.timerRemaining=ms;session.timerEnd=Date.now()+ms;}session.timerStep=session.idx;save();updateTimer();});
+$('cookTimerAdd').addEventListener('click',()=>{if(NO_TIMER.includes(session.idx))return;if(session.timerEnd)session.timerEnd+=300000;else session.timerRemaining=remain()+300000;save();updateTimer();});
+$('cookTimerReset').addEventListener('click',resetTimer);
+$('cookMinusBake')?.addEventListener('click',()=>{session.baked=Math.max(0,session.baked-1);save();renderCook()});
+$('cookPlusBake')?.addEventListener('click',()=>{session.baked=Math.min(howMany(),session.baked+1);save();renderCook()});
+$('cookNewBatch').addEventListener('click',()=>{if(!window.confirm('Start a fresh batch? This resets completed steps, notes, and baking counter, but keeps your recipe settings.'))return;
+ checked().forEach((done,i)=>{if(done)toggleComplete(i,false)});session={idx:0,notes:'',baked:0,timerStep:-1,timerRemaining:null,timerEnd:null};save();renderCook();showToast('Fresh batch is ready');});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!PANEL.hidden)close()});
+interval=setInterval(()=>{if(!PANEL.hidden)updateTimer()},1000);
+if(checked().some(Boolean))$('guidedStart').textContent='▶ Continue guided bake';
+})();
+</script>
+
+</body></html>
